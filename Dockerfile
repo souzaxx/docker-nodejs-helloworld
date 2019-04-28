@@ -7,6 +7,9 @@ RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
  && apt-get update\
  && apt-get install -y nodejs && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+LABEL Name=dokcer-nodejs-helloworld
+LABEL Version=0.0.1
+
 # App
 ADD . /web
 WORKDIR /web
