@@ -10,10 +10,10 @@ bash: build
 	docker run -it --rm --entrypoint /bin/bash $(NAME)
 
 run: build
-	docker run -i -t -p 43567:8080 -d $(NAME)
+	docker run -i -t -p 8080:8080 -d $(NAME)
 
 test:
-	curl localhost:43567
+	curl localhost:8080
 
 clean:
 	rm -rf node_modules
